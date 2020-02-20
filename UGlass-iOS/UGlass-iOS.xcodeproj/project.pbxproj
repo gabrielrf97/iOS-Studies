@@ -13,6 +13,10 @@
 		C017BFDF23345FEE00CB1909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017BFDD23345FEE00CB1909 /* Main.storyboard */; };
 		C017BFE123345FF500CB1909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017BFE023345FF500CB1909 /* Assets.xcassets */; };
 		C017BFE423345FF500CB1909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017BFE223345FF500CB1909 /* LaunchScreen.storyboard */; };
+		C017BFED2334600D00CB1909 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017BFEC2334600D00CB1909 /* Glass.swift */; };
+		C017BFF42334618900CB1909 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017BFF32334618900CB1909 /* FormViewController.swift */; };
+		C017BFF6233461A000CB1909 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017BFF5233461A000CB1909 /* Form.storyboard */; };
+		C017BFF823346B8700CB1909 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017BFF723346B8700CB1909 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C017BFE023345FF500CB1909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C017BFE323345FF500CB1909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C017BFE523345FF500CB1909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C017BFEC2334600D00CB1909 /* Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
+		C017BFF32334618900CB1909 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		C017BFF5233461A000CB1909 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
+		C017BFF723346B8700CB1909 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		C017BFD623345FEE00CB1909 /* UGlass-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C017BFEE2334611F00CB1909 /* Modules */,
+				C017BFEB23345FFC00CB1909 /* Models */,
 				C017BFD723345FEE00CB1909 /* AppDelegate.swift */,
 				C017BFD923345FEE00CB1909 /* SceneDelegate.swift */,
 				C017BFDB23345FEE00CB1909 /* ViewController.swift */,
@@ -65,6 +75,56 @@
 				C017BFE523345FF500CB1909 /* Info.plist */,
 			);
 			path = "UGlass-iOS";
+			sourceTree = "<group>";
+		};
+		C017BFEB23345FFC00CB1909 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C017BFEC2334600D00CB1909 /* Glass.swift */,
+				C017BFF723346B8700CB1909 /* Session.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C017BFEE2334611F00CB1909 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C017BFF22334615B00CB1909 /* Checkout View */,
+				C017BFF12334614D00CB1909 /* ARView */,
+				C017BFF02334614500CB1909 /* IntroView */,
+				C017BFEF2334613400CB1909 /* Form */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C017BFEF2334613400CB1909 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				C017BFF32334618900CB1909 /* FormViewController.swift */,
+				C017BFF5233461A000CB1909 /* Form.storyboard */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		C017BFF02334614500CB1909 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
+		C017BFF12334614D00CB1909 /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
+		C017BFF22334615B00CB1909 /* Checkout View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Checkout View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +187,7 @@
 			files = (
 				C017BFE423345FF500CB1909 /* LaunchScreen.storyboard in Resources */,
 				C017BFE123345FF500CB1909 /* Assets.xcassets in Resources */,
+				C017BFF6233461A000CB1909 /* Form.storyboard in Resources */,
 				C017BFDF23345FEE00CB1909 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C017BFED2334600D00CB1909 /* Glass.swift in Sources */,
 				C017BFDC23345FEE00CB1909 /* ViewController.swift in Sources */,
+				C017BFF823346B8700CB1909 /* Session.swift in Sources */,
 				C017BFD823345FEE00CB1909 /* AppDelegate.swift in Sources */,
+				C017BFF42334618900CB1909 /* FormViewController.swift in Sources */,
 				C017BFDA23345FEE00CB1909 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
