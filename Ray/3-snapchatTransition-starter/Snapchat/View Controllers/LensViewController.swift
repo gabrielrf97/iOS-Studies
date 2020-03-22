@@ -64,15 +64,17 @@ extension LensViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: UICollectionViewDelegate
 extension LensViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return lensFiltersImages.count
-  }
     
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LensCircleCell.identifier, for: indexPath) as? LensCircleCell else { fatalError() }
-    cell.image = lensFiltersImages[indexPath.row]
-    return cell
-  }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return lensFiltersImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LensCircleCell.identifier, for: indexPath) as? LensCircleCell else { fatalError() }
+        cell.image = lensFiltersImages[indexPath.row]
+        return cell
+    }
+    
 }
 
 // MARK: UIScrollViewDelegate

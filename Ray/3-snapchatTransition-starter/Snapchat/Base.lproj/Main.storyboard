@@ -353,10 +353,6 @@
                                         <size key="customSize" width="50" height="50"/>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="GgM-ng-gVH" id="Vdy-iE-hbd"/>
-                                    <outlet property="delegate" destination="GgM-ng-gVH" id="RYu-wp-O8K"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -377,7 +373,7 @@
                     </view>
                     <connections>
                         <outlet property="faceImage" destination="QzB-aV-BYd" id="nb0-8d-Hmc"/>
-                        <outlet property="lensCollectionView" destination="DpV-5w-x4g" id="xPK-N8-1jB"/>
+                        <outlet property="lensCollectionView" destination="DpV-5w-x4g" id="BGP-2H-vbw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fz-LO-HG6" userLabel="First Responder" sceneMemberID="firstResponder"/>

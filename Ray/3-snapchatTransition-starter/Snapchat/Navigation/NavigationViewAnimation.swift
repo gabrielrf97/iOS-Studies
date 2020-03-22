@@ -36,8 +36,8 @@ extension NavigationView {
     chatIconGrayView.alpha = offset
     discoverIconWhiteView.alpha = chatIconWhiteView.alpha
     discoverIconGrayView.alpha = chatIconGrayView.alpha
-    cameraButtonWhiteView.alpha = 1 - offset
-    cameraButtonGrayView.alpha = offset
+    cameraButtonWhiteView.alpha = chatIconWhiteView.alpha
+    cameraButtonGrayView.alpha = chatIconGrayView.alpha
   }
   
   func animateIconPosition(offset: CGFloat) {
