@@ -34,3 +34,8 @@ MemoryLayout<NonEmptyClass>.stride
 MemoryLayout<NonEmptyClass>.alignment
 
 //Unsafe Fundamentals
+
+//Pointers types -> Memory / Mutable, Bytes / Raw, Sequences & Collections / Buffer, Types / Pointee
+//Memory must be bound to one type
+
+
