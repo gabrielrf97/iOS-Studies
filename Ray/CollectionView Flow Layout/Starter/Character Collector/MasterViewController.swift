@@ -28,30 +28,34 @@ import UIKit
 class MasterViewController: UICollectionViewController {
   
     let charactersData = Characters.loadCharacters()
-    let numberOfCollumsn : CGFloat = 3
-    let inset: CGFloat = 8
+    let numberOfCollumsn : CGFloat = 1
+    let inset: CGFloat = 20
+    let itemSpacing: CGFloat = 0
+    let lineSpacing: CGFloat = 0
+    var isRandom = false
       
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
 
-    navigationController!.isToolbarHidden = true
-
-    // Refresh Control
-    let refreshControl = UIRefreshControl()
-    refreshControl.addTarget(self, action: #selector(refreshControlDidFire), for: .valueChanged)
-    collectionView?.refreshControl = refreshControl
+        navigationController!.isToolbarHidden = true
+        
+        // Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlDidFire), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "MasterToDetail" {
-      let detailViewController = segue.destination as! DetailViewController
-      detailViewController.character = sender as? Characters
-    }
+        if segue.identifier == "MasterToDetail" {
+          let detailViewController = segue.destination as! DetailViewController
+          detailViewController.character = sender as? Characters
+        }
     }
 
     @objc func refreshControlDidFire() {
-    collectionView?.reloadData()
-    collectionView?.refreshControl?.endRefreshing()
+        isRandom = true
+        collectionView?.reloadData()
+        collectionView?.refreshControl?.endRefreshing()
     }
 
 }
@@ -91,14 +95,21 @@ extension MasterViewController {
 
     // MARK: UICollectionViewDelegateFlowLayout
 extension MasterViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.frame.width / numberOfCollumsn) - inset
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let _inset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+        let _inset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
         return _inset
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return -40
+    }
+}
+
+extension MasterViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
     }
 }
 
